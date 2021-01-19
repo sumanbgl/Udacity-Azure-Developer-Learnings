@@ -70,3 +70,24 @@ server {
  
  az group delete -n resource-group-west
 ```
+
+**cli commands related to Creating a App service exercise**
+```
+az login
+cd web
+az webapp up \
+ --resource-group resource-group-west \
+ --name hello-world1234 \
+ --sku F1 \
+ --verbose
+ az webapp up \
+ --name hello-world1234 \
+ --verbose
+ az group delete -n resource-group-west
+ az webapp delete \
+    --name hello-world1234 \
+    --resource-group resource-group-west
+az appservice plan delete \
+    --name [App Service Plan Name] \
+    --resource-group resource-group-west    
+```
